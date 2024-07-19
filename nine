@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feliz 9 Meses</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f8ff;
+            font-family: 'Arial', sans-serif;
+            color: #333;
+        }
+        .login-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        input {
+            margin: 5px;
+            padding: 10px;
+            font-size: 1em;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 1em;
+            background-color: #ff69b4;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #ff1493;
+        }
+        .message {
+            font-size: 2.5em;
+            text-align: center;
+            color: #ff69b4;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container" id="login-container">
+        <input type="text" id="username" placeholder="Cuenta">
+        <input type="password" id="password" placeholder="Contraseña">
+        <button onclick="validateLogin()">Iniciar Sesión</button>
+    </div>
+    <div class="message" id="message" style="display: none;">
+        Feliz 9 meses, mi vida bella
+    </div>
+
+    <script>
+        function validateLogin() {
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+            if (username === '9Meses' && password === 'BuBu') {
+                document.getElementById('login-container').style.display = 'none';
+                document.getElementById('message').style.display = 'block';
+            } else {
+                alert('Credenciales incorrectas. Inténtalo de nuevo.');
+            }
+        }
+    </script>
+</body>
+</html>
